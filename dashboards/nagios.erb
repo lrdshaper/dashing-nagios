@@ -10,6 +10,8 @@
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
       <div data-id="nagios-dev" data-view="Nagios" data-unordered="true" data-title="Nagios Dev" data-moreinfo="Unacknowledged events"></div>
     </li>
+    <li data-row="2" data-col="1" data=sizex="1" data-sizey="1">
+      <div data-id="nagios-prod-crits" data-view="List" data-unordered="true" data-tile="Unack'ed Critical Alerts"></div>
   </ul>
   <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "criticals": 0, "warnings": 1 }' \http://<%=request.host%>:<%=request.port%>/widgets/nagios-prod</div></center>
 </div>
