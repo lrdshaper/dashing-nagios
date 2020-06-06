@@ -20,4 +20,4 @@ Nagios server.
 Screenshot
 ==========
 
-![image](https://raw.github.com/aelse/dashing-nagios/master/assets/dashing-nagios-example.png)
+![image](https://raw.github.com/lrdshaper/dashing-nagios/master/assets/dashing-nagios-example.png)

@@ -1,17 +1,31 @@
 <% content_for :title do %>My Nagios dashboard<% end %>
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is a sample Nagios dashboard." data-moreinfo=""></div>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="dev-service" data-view="Nagios" data-unordered="true" data-title="Dev Services" data-moreinfo=""></div>
+    </li>
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="dev-service-alerts" data-view="List" data-unordered="true" data-title="Dev Service Alerts"></div>
     </li>
     <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="nagios-prod" data-view="Nagios" data-unordered="true" data-title="Nagios Prod" data-moreinfo="Unacknowledged events"></div>
+      <div data-id="prod-service" data-view="Nagios" data-unordered="true" data-title="Prod Services" data-moreinfo=""></div>
     </li>
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
-      <div data-id="nagios-dev" data-view="Nagios" data-unordered="true" data-title="Nagios Dev" data-moreinfo="Unacknowledged events"></div>
+      <div data-id="prod-service-alerts" data-view="List" data-unordered="true" data-title="Prod Service Alerts"></div>
     </li>
-    <li data-row="2" data-col="1" data=sizex="1" data-sizey="1">
-      <div data-id="nagios-prod-crits" data-view="List" data-unordered="true" data-tile="Unack'ed Critical Alerts"></div>
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="dev-host" data-view="Nagios" data-unordered="true" data-title="Dev Hosts" data-moreinfo=""></div>
+    </li>
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="dev-host-alerts" data-view="List" data-unordered="true" data-title="Dev Host Alerts"></div>
+    </li>
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="prod-host" data-view="Nagios" data-unordered="true" data-title="Prod Hosts" data-moreinfo=""></div>
+    </li>
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="prod-host-alerts" data-view="List" data-unordered="true" data-title="Prod Host Alerts"></div>
+    </li>
   </ul>
   <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "criticals": 0, "warnings": 1 }' \http://<%=request.host%>:<%=request.port%>/widgets/nagios-prod</div></center>
 </div>
+

@@ -5,18 +5,20 @@
   <h4>Error querying Nagios</h4>
 </div> <!-- /no error -->
 <div data-hideif="status | equals 'error'"> <!-- no error -->
-<div data-hideif="criticals | equals 0">
-<h3 data-bind="criticals"></h3>
-<h4 data-showif="criticals | equals 1">critical</h4>
-<h4 data-hideif="criticals | equals 1">criticals</h4>
+<div>
+<h3 data-bind="greens"></h3>
+<h4 data-bind="green_label"></h4>
 </div>
-<div data-hideif="warnings | equals 0">
-<h3 data-bind="warnings"></h3>
-<h4 data-showif="warnings | equals 1">warning</h4>
-<h4 data-hideif="warnings | equals 1">warnings</h4>
+<div>
+<h3 data-bind="reds"></h3>
+<h4 data-bind="red_label"></h4>
 </div>
-<div data-showif="status | equals 'green'"><h3>&#10003;</h3></div>
-<p class="updated-at" data-bind="updatedAtMessage"></p>
-</div> <!-- /no error -->
+<div>
+<h3 data-bind="yellows"></h3>
+<h4 data-bind="yellow_label"></h4>
+</div>
 </li>
 </ul>
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
+
